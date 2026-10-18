@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin dashboard | SkillBooks</title>
+<meta name="description" content="Upload and manage eBooks and wallpapers.">
+<meta name="theme-color" content="#05030b">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBooks">
+<meta property="og:title" content="Admin dashboard | SkillBooks">
+<meta property="og:description" content="Upload and manage eBooks and wallpapers.">
+<meta property="og:url" content="{{BASE_URL}}/upload.html">
+<meta property="og:image" content="{{BASE_URL}}/assets/images/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="upload">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="site-header"></div>
+<main id="main" class="container section">
+<div class="dash-head"><h1>Admin dashboard</h1><button type="button" id="logout-btn" class="btn btn-ghost">Log out</button></div>
+<div class="type-switch" role="group" aria-label="Product type">
+<button type="button" class="btn type-btn is-active" data-type="ebook" aria-pressed="true">Upload eBook</button>
+<button type="button" class="btn type-btn" data-type="wallpaper" aria-pressed="false">Upload Wallpaper</button>
+</div>
+<section class="panel glass" aria-labelledby="form-title">
+<h2 id="form-title">Upload eBook</h2>
+<form id="product-form" novalidate>
+<div class="form-grid">
+<div class="field field-full"><label for="image" id="image-label">Product cover image</label>
+<input type="file" id="image" name="image" accept="image/jpeg,image/png,image/webp" aria-describedby="image-hint err-image">
+<p class="hint" id="image-hint">JPG, JPEG, PNG or WEBP, up to 5 MB.</p><p class="error" id="err-image" data-error-for="image"></p>
+<div class="preview" id="preview" hidden><img id="preview-img" alt="Selected image preview" width="320" height="200"></div></div>
+<div class="field"><label for="title" id="title-label">eBook name</label><input id="title" name="title" maxlength="120" aria-describedby="err-title"><p class="error" id="err-title" data-error-for="title"></p></div>
+<div class="field"><label for="category">Category</label><select id="category" name="category" aria-describedby="err-category"></select><p class="error" id="err-category" data-error-for="category"></p></div>
+<div class="field field-full"><label for="description">Description</label><textarea id="description" name="description" maxlength="2000" aria-describedby="err-description"></textarea><p class="error" id="err-description" data-error-for="description"></p></div>
+<div class="field"><label for="price">Price (USD)</label><input id="price" name="price" inputmode="decimal" placeholder="9.99" aria-describedby="err-price"><p class="error" id="err-price" data-error-for="price"></p></div>
+<div class="field"><label for="status">Status</label><select id="status" name="status"><option value="published">Published</option><option value="draft">Draft</option></select><p class="error" id="err-status" data-error-for="status"></p></div>
+<div class="field field-full"><label for="gumroadUrl">Gumroad product URL</label><input id="gumroadUrl" name="gumroadUrl" type="url" placeholder="https://yourname.gumroad.com/l/product" aria-describedby="err-gumroadUrl"><p class="error" id="err-gumroadUrl" data-error-for="gumroadUrl"></p></div>
+<div class="field"><label for="tags">Tags (optional, comma separated)</label><input id="tags" name="tags" placeholder="python, beginners" aria-describedby="err-tags"><p class="error" id="err-tags" data-error-for="tags"></p></div>
+<div class="field" id="resolution-field" hidden><label for="resolution">Resolution (optional)</label><input id="resolution" name="resolution" placeholder="3840x2160" aria-describedby="err-resolution"><p class="error" id="err-resolution" data-error-for="resolution"></p></div>
+</div>
+<div class="form-actions">
+<button type="submit" id="submit-btn" class="btn btn-primary"><span class="spinner" hidden></span><span id="submit-label">Publish Product</span></button>
+<button type="button" id="cancel-edit" class="btn btn-ghost" hidden>Cancel editing</button>
+</div>
+</form>
+</section>
+<section class="panel glass" aria-labelledby="h-list">
+<div class="list-head"><h2 id="h-list">Your products</h2>
+<div class="field"><label class="sr-only" for="list-filter">Filter list</label><select id="list-filter"><option value="">All products</option><option value="ebook">eBooks</option><option value="wallpaper">Wallpapers</option></select></div></div>
+<div id="admin-list" class="admin-list" aria-live="polite"></div>
+</section>
+</main>
+<dialog id="confirm-dialog" class="dialog" aria-labelledby="confirm-title">
+<form method="dialog"><h2 id="confirm-title">Delete product?</h2><p id="confirm-text"></p>
+<div class="dialog-actions"><button type="submit" class="btn btn-ghost" value="cancel">Cancel</button><button type="submit" class="btn btn-danger" value="ok">Delete</button></div></form>
+</dialog>
+<div id="site-footer"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script src="js/main.js"></script>
+<script src="js/upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin login | SkillBooks</title>
+<meta name="description" content="Administrator sign in for SkillBooks.">
+<meta name="theme-color" content="#05030b">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBooks">
+<meta property="og:title" content="Admin login | SkillBooks">
+<meta property="og:description" content="Administrator sign in for SkillBooks.">
+<meta property="og:url" content="{{BASE_URL}}/login.html">
+<meta property="og:image" content="{{BASE_URL}}/assets/images/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="login">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="site-header"></div>
+<main id="main" class="container section narrow">
+<div class="panel glass login-panel">
+<h1>Admin login</h1>
+<p class="muted">Only the store administrator can sign in. There is no public registration.</p>
+<form id="login-form" novalidate>
+<div class="field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" maxlength="100" required></div>
+<div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" maxlength="200" required></div>
+<p id="login-error" class="error" role="alert"></p>
+<button class="btn btn-primary btn-block" type="submit" id="login-btn"><span class="spinner" hidden></span><span class="btn-label">Sign in</span></button>
+</form>
+<div id="signed-in" hidden>
+<p>You are signed in as the administrator.</p>
+<div class="form-actions"><a class="btn btn-primary" href="upload.html">Open dashboard</a><button type="button" id="logout-btn" class="btn btn-ghost">Log out</button></div>
+</div>
+</div>
+</main>
+<div id="site-footer"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

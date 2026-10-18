@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallpapers | SkillBooks</title>
+<meta name="description" content="Browse premium wallpapers. Preview every design, filter by category and buy securely through Gumroad.">
+<meta name="theme-color" content="#05030b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBooks">
+<meta property="og:title" content="Wallpapers | SkillBooks">
+<meta property="og:description" content="Browse premium wallpapers. Preview every design, filter by category and buy securely through Gumroad.">
+<meta property="og:url" content="{{BASE_URL}}/wallpapers.html">
+<meta property="og:image" content="{{BASE_URL}}/assets/images/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="wallpapers">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="site-header"></div>
+<main id="main" class="container section">
+<header class="page-head">
+<h1>Wallpapers</h1>
+<p class="lead">Premium wallpapers. Previews are shown here; originals are delivered after purchase.</p>
+</header>
+<div class="toolbar glass" role="search">
+<div class="field"><label for="search">Search</label><input id="search" type="search" placeholder="Search wallpapers" autocomplete="off" maxlength="100"></div>
+<div class="field"><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div>
+<div class="field"><label for="sort">Sort by</label><select id="sort"><option value="newest">Newest first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="title">Title A to Z</option></select></div>
+</div>
+<p id="result-count" class="result-count" aria-live="polite"></p>
+<div id="product-grid" class="grid grid-wide"></div>
+<noscript><p class="state">JavaScript is required to browse the store.</p></noscript>
+</main>
+<div id="site-footer"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script src="js/main.js"></script>
+<script src="js/wallpapers.js"></script>
+</body>
+</html>

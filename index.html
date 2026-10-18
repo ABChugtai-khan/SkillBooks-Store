@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillBooks | eBooks and wallpapers for digital skills</title>
+<meta name="description" content="Learn digital skills, freelancing, AI and coding with practical eBooks, and download premium wallpapers. Checkout is handled securely by Gumroad.">
+<meta name="theme-color" content="#05030b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBooks">
+<meta property="og:title" content="SkillBooks | eBooks and wallpapers for digital skills">
+<meta property="og:description" content="Learn digital skills, freelancing, AI and coding with practical eBooks, and download premium wallpapers. Checkout is handled securely by Gumroad.">
+<meta property="og:url" content="{{BASE_URL}}/index.html">
+<meta property="og:image" content="{{BASE_URL}}/assets/images/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="hero">
+<canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+<div class="container hero-inner">
+<h1>Learn Skills. Build Your Future.</h1>
+<p class="lead">Practical eBooks on coding, AI, freelancing and creative work, plus premium wallpapers for your screens. Made for learners in Pakistan and around the world.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="ebooks.html">Explore eBooks</a>
+<a class="btn btn-ghost" href="wallpapers.html">Explore Wallpapers</a>
+</div>
+</div>
+</section>
+<section class="section container" aria-labelledby="h-fe">
+<div class="section-head"><h2 id="h-fe">Featured eBooks</h2><a class="link-more" href="ebooks.html">View all eBooks</a></div>
+<div id="featured-ebooks" class="grid"></div>
+</section>
+<section class="section container" aria-labelledby="h-fw">
+<div class="section-head"><h2 id="h-fw">Featured wallpapers</h2><a class="link-more" href="wallpapers.html">View all wallpapers</a></div>
+<div id="featured-wallpapers" class="grid grid-wide"></div>
+</section>
+<section class="section container" aria-labelledby="h-cat">
+<h2 id="h-cat">Popular categories</h2>
+<h3 class="muted">eBooks</h3>
+<div id="cats-ebook" class="chips"></div>
+<h3 class="muted">Wallpapers</h3>
+<div id="cats-wallpaper" class="chips"></div>
+</section>
+<section class="section container" aria-labelledby="h-ben">
+<h2 id="h-ben">Why shop here</h2>
+<div class="benefits">
+<div class="benefit glass"><h3>Practical skills</h3><p>Guides on coding, AI, freelancing and design that you can apply to real work.</p></div>
+<div class="benefit glass"><h3>Checkout by Gumroad</h3><p>Payment and file delivery are handled by Gumroad. This site never sees your card details.</p></div>
+<div class="benefit glass"><h3>Worldwide access</h3><p>Prices are in USD. Customers in Pakistan and other countries can buy wherever Gumroad checkout is available.</p></div>
+<div class="benefit glass"><h3>Preview before you buy</h3><p>See every cover and wallpaper preview here. Original files are delivered after purchase.</p></div>
+</div>
+</section>
+<section class="section container" aria-labelledby="h-news">
+<div class="newsletter glass">
+<div><h2 id="h-news">Get new releases by email</h2><p class="muted">We will email you when new eBooks and wallpapers are published. No spam.</p></div>
+<form id="newsletter-form" novalidate>
+<label class="sr-only" for="newsletter-email">Email address</label>
+<input id="newsletter-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required aria-describedby="newsletter-error">
+<button class="btn btn-primary" type="submit">Subscribe</button>
+<p id="newsletter-error" class="error" role="alert"></p>
+</form>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/hero3d.js"></script>
+</body>
+</html>
